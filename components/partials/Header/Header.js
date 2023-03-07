@@ -2,16 +2,29 @@ import Image from "next/image";
 import React from "react";
 
 import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import { BellIcon, ChatBubbleOvalLeftEllipsisIcon, ChevronDownIcon, FlagIcon, HomeIcon, PlayIcon, ShoppingCartIcon, Squares2X2Icon, UserGroupIcon } from "@heroicons/react/24/solid";
+import {
+    BellIcon,
+    ChatBubbleOvalLeftEllipsisIcon,
+    ChevronDownIcon,
+    FlagIcon,
+    HomeIcon,
+    PlayIcon,
+    ShoppingCartIcon,
+    Squares2X2Icon,
+    UserGroupIcon,
+} from "@heroicons/react/24/solid";
 import HeaderIcon from "./HeaderIcon";
+import { useSession, signOut } from "next-auth/react";
 
 function Header() {
+    const { data: session } = useSession()
     return (
         <div className="sticky top-0 z-50 bg-white flex items-center p-2 lg:px-5 shadow-md">
             {/* Left */}
             <div className="flex items-center">
                 <Image
                     src="https://links.papareact.com/5me"
+                    alt="fb"
                     width={40}
                     height={40}
                     position="fixed"
@@ -38,6 +51,14 @@ function Header() {
             {/* Right */}
             <div className="flex items-center sm:space-x-2 justify-end">
                 {/* Profile Pics */}
+                <Image
+                    onClick={signOut}
+                    className="rounded-full cursor-pointer"
+                    src={session.user.image}
+                    width="40"
+                    height="40"
+                    position="fixed"
+                />
                 <p className="font-semibold pr-3 whitespace-nowrap">User</p>
                 <Squares2X2Icon className="icon" />
                 <ChatBubbleOvalLeftEllipsisIcon className="icon" />

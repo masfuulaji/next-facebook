@@ -1,22 +1,28 @@
 {
-  "name": "fb-clone",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@heroicons/react": "^2.0.16",
-    "next": "13.2.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.13",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.7"
-  }
+    "name": "fb-clone",
+    "version": "0.1.0",
+    "private": true,
+    "engines": {
+        "node": ">=12.0.0",
+        "yarn": ">=1.22.0",
+        "npm": "Please-Use-Yarn!!!"
+    },
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@heroicons/react": "^2.0.16",
+        "next": "13.2.1",
+        "next-auth": "^4.19.2",
+        "react": "18.2.0",
+        "react-dom": "18.2.0"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.13",
+        "postcss": "^8.4.21",
+        "tailwindcss": "^3.2.7"
+    }
 }
