@@ -59,7 +59,7 @@ function Header() {
                     height="40"
                     position="fixed"
                 />
-                <p className="font-semibold pr-3 whitespace-nowrap">User</p>
+                <p className="font-semibold pr-3 whitespace-nowrap">{session.user.name}</p>
                 <Squares2X2Icon className="icon" />
                 <ChatBubbleOvalLeftEllipsisIcon className="icon" />
                 <BellIcon className="icon" />
